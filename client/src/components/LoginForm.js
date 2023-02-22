@@ -1,7 +1,9 @@
 import React from "react";
 import "../styles/LoginForm.css";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+  const navigation = useNavigate();
   const token = localStorage.getItem("token");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -16,16 +18,13 @@ const LoginForm = () => {
       .then((res) => res.json())
       .then((data) => {localStorage.setItem("token", data.idToken)
       console.log(data)} )
-      .then(() => window.location.reload())
+      .then(() => navigation("/"))
       .catch((err) => console.log(err));
   };
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    window.location.reload();
-  };
+  
   return (
     <div>
-      { token ? <button onClick={handleLogout}>Logout</button> : 
+      { token ? <button>Logout</button> : 
     <div className="login-page">
       <div className="form">
         <div className="login-form">

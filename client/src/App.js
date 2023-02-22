@@ -6,11 +6,7 @@ const App = () => {
     return (
     <BrowserRouter>
     <div className="App">
-      <div className="container">
-        <div className="main">
           <Routes />
-        </div>
-      </div>
     </div>
   </BrowserRouter>
 
