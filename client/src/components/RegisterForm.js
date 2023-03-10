@@ -35,7 +35,11 @@ const RegisterForm = () => {
     };
   return (
     <div className="login-page">
+      <div className="login-picture">
+        <i className="fa-solid fa-key"></i>
+      </div>
       <div className="form">
+        <h1>Register</h1>
         <div className="register-form">
           <input type="email" placeholder="Email address" required onChange={ 
             (e) => setEmail(e.target.value)
@@ -48,7 +52,7 @@ const RegisterForm = () => {
           } />
           <button onClick={handleRegister}>Create</button>
           <p className="message">
-            Already registered?
+            Already registered? 
             <a href="/login">
               Sign In
             </a>

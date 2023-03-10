@@ -26,8 +26,12 @@ const LoginForm = () => {
     <div>
       { token ? <button>Logout</button> : 
     <div className="login-page">
+      <div className="login-picture">
+      <i className="fa-regular fa-user"></i>
+        </div>
       <div className="form">
         <div className="login-form">
+          <h1>Web IoT</h1>
           <input type="text" placeholder="Username" onChange={
             (e) => setEmail(e.target.value)
           }/>
